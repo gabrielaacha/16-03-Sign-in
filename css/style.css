@@ -24,10 +24,63 @@ body {
   background-color: white;
   width: 40vw;
   height: 40vh;
-  padding: 5%;
+  padding: 4%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-rows: repeat(6, 6rem); */
+  grid-template-areas:
+    "logo1 . "
+    "signIn ."
+    "email . "
+    "noAccount . "
+    "userName ."
+    ". button";
 }
 
 .logo1 {
   width: 100px;
-  height: 60px;
+  height: 40px;
+  grid-area: logo1;
+}
+
+.signIn {
+  grid-area: signIn;
+}
+
+.button {
+  /* display: flex; */
+  /* justify-content: end; */
+
+  background-color: blue;
+  font-size: x-small;
+  color: white;
+  width: 70px;
+  height: 20px;
+  border: transparent;
+  grid-area: button;
+}
+
+p {
+  font-size: x-small;
+}
+
+.email {
+  border: transparent;
+  grid-area: email;
+}
+
+.noAccount {
+  grid-area: noAccount;
+}
+
+.userName {
+  grid-area: userName;
+}
+
+.logo1,
+.signIn,
+.email,
+.noAccount,
+.userName {
+  padding: 4px;
 }
